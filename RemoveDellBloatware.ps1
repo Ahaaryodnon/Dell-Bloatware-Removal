@@ -8,9 +8,7 @@
     3) Dynamically scans the registry for any remaining “Dell” apps and uninstalls them.
     4) Deletes Dell scheduled tasks and services.
 
-    Logs every action (and errors) to C:\Temp\DellBloatwareRemoval.log.
-
-    a lot of GUIDS and Exe from https://gist.github.com/tsfahmed2/5385b56e9a2d387ca61b355b90541084
+    Logs every action (and errors) to C:\Temp\DellBloatwareRemoval.log
 #>
 
 # Prevent terminating errors from stopping the script
@@ -22,11 +20,6 @@ $LogFile = 'C:\Temp\DellBloatwareRemoval.log'
 
 # MSI-based Dell applications (GUIDs, without braces)
 $DellGuids = @(
-     '5669AB71-1302-4412-8DA1-CB69CD7B7324', # Dell Command | Update for Windows 10
-     '4CCADC13-F3AE-454F-B724-33F6D4E52022', # Dell Command | Update for Windows 10
-     'EC542D5D-B608-4145-A8F7-749C02BE6D94', # Dell Command | Update for Windows 10
-     '41D2D254-D869-4CD8-B440-5DF49083C4BA', # Dell Command | Update for Windows 10
-     'D8AE5F9D-647C-49B4-A666-1C20B44EC0E1', # Dell Update
      '70E9F8CC-A23E-4C25-B292-C86C1821587C', # Dell Update for Windows 10
      'CC5730C7-C867-43BD-94DA-00BB3836906F', # Dell Digital Delivery Services
      '66E2407E-9001-483E-B2AA-7AEF97567143', # Dell Digital Delivery Services
